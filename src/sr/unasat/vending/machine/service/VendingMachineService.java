@@ -3,6 +3,9 @@ package sr.unasat.vending.machine.service;
 public class VendingMachineService {
 
     public String fetchBeverage(String selection) {
+        if (selection == null || selection.trim().isEmpty()){
+            return "U heeft geen keuze gemaakt";
+        }
         String message;
         switch (selection.toUpperCase()) {
             case "COLA":
